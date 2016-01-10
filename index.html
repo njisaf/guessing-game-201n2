@@ -9,7 +9,7 @@
       <div id="hiddenContent" style="display: none">
         <header style= font-family:Impact; align="center";>
           <h1><div id ="name"; align="top";></div></h1>
-            <h2>Welcome to the <b style= "font-family: Courier New; font-size:30px;">PURPLE PAGE</b>!</h2>
+            <h2>You have unlocked the <b style= "font-family: Courier New; font-size:30px;">PURPLE PAGE</b>!</h2>
               <h3>Where <em style= "font-size:22px";> everything </em> is <b style="font-family: Courier New; font-size:30px;">PURPLE</b>!!!</h3>
         </header>
 
@@ -50,14 +50,14 @@
 
         <script type="text/javascript">
 
-                var basicMathAnswer = [4, "four"]
-                function getSmart() {
+                var myAge = [28, "twenty eight", "twenty-eight", "twentyeight"];
 
                 alert("Welcome to this REALLY cool page!!!  Let's play a game shall we?");
-                var basicMath = prompt ("But first...A test to see if you are worthy.  What is 2+2?");
-                    console.log("User has entered the number" + " " + basicMath);
+                function getSmart() {
+                var guessAge = prompt ("To view this page you must first guess my age.  How old am I?");
+                    console.log("User has entered the number" + " " + guessAge);
 
-      if (basicMath == basicMathAnswer[0]) {
+      if (guessAge == myAge[0]) {
                 function colorTest() {
                 alert("Impressive.  Yet ye who would see this page must first answer me these questions three...");
 
@@ -77,28 +77,40 @@
                       document.getElementById('hiddenContent').style.display= "block";
                       document.getElementById("name").innerHTML = ("CONGRATULATIONS" + " " + userName.toUpperCase() + "!!!");
 
-    } else { console.log(userName + " " + "has poor taste and will now be ejected from the website")
+     } else {       console.log(userName + " " + "has poor taste and will now be ejected from the website")
                 alert("Okay" + " " + userName + ", " + "that's nice, but" + " " + favColor.toLowerCase() + " " + "is a terrible color so get off of my page...");
                     window.close();}
           }colorTest();
 
-     } else if (basicMath.toLowerCase() == basicMathAnswer[1]) {
+     } else if (guessAge.toLowerCase() == myAge[1]) {
+                  colorTest();
+     } else if (guessAge.toLowerCase() == myAge[2]) {
+                  colorTest();
+     } else if (guessAge.toLowerCase() == myAge[3]) {
                   colorTest();
 
-     } else  if (basicMath > basicMathAnswer [0]){
-                alert("Your guess is too high!");
-                function badMath() {
-                    console.log("User is bad at math...");
+     } else if (guessAge > 31){
+                alert("Your guess is way too high!");
+                function wrongAge() {
+                    console.log("User guessed incorrectly.  Restarting code.");
                 confirm("Do you want to try again?");
                   getSmart();
-          } badMath();
+          } wrongAge();
 
-      } else if (basicMath < basicMathAnswer [0]){
-                alert("Your guess is too low!");
-                  badMath();
+      } else if (guessAge >= 29 && guessAge <= 31) {
+                alert("Your guess is too high but very close.  Try a lower number!")
+                  wrongAge();
 
-      } else { alert("Maybe you should get off the internet and go back to the first grade...")
-                  badMath();
+      } else if (guessAge < 22){
+                alert("Your guess is way too low!");
+                  wrongAge();
+
+      } else if (guessAge >= 23 && guessAge <= 27){
+                alert("Your guess is too low but very close.  Try a higher number!");
+                  wrongAge();
+
+      } else {   alert("That answer is wrong.  Try guessing with an integer!")
+                  wrongAge();
                 }
           } getSmart();
 
