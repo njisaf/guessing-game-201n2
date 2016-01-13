@@ -14,5 +14,6 @@ My current project for Code 201.  This is a rough draft version of the readme fi
 ### Resources Used
   - [**Google Image Search**](http://www.google.com)
   - [**Codecademy.com**] (http://www.Codecademy.com)
-####
-readme last edited by Daniel Wade 1/11/16
+  - [**Readme Example Page**] (https://github.com/matiassingers/awesome-readme/blob/master/readme.md)
+
+ This file last edited by Daniel Wade 1/11/16
