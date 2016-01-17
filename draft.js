@@ -43,7 +43,7 @@ console.log("Game Type: " + arrayGameType);
 console.log("Game Length: " + gameLength);
 
 var scoreCorrect = 0;
-var gameCount = 1;
+var gameCount = 0;
 var gameGuess = 0;
 var i = 0; //will this work if here?
 
@@ -82,12 +82,26 @@ function gameString () {
   }
 
 function buttonGuess () {
-  gameGuess = prompt("Enter your guess.").toUpperCase();
+  gameGuess = prompt("Enter your guess.");
   console.log("Game number " + gameCount + " answer entered:" + gameGuess)
+}
+
+function buttonOnClick () {
+  buttonClicked = true;
+}
+
+function buttonCheck () {
+    if (buttonClicked = false) {
+      window.setTimeout(buttonCheck, 100);
+    } else {
+      console.log("Timer is running?")
+    }
 }
 
 function tryAgain () {
   elNext.textContent = "Try again!";
+  buttonOnClick;
+  gameGuess = prompt("Try again!");
   console.log("Game number " + gameCount + " trying again.")
 }
 
@@ -120,26 +134,25 @@ function gameReveal () {
   }
 
 function gameScore () {
-  elScore.textContent = "You have correctly guessed " + scoreCorrect + " out of " + gameLength + "\nYou are on Question " + gameCount;
-}
-
-function buttonOnClick () {
-  buttonClicked = true;
-  console.log("Button has been clicked.")
+  elScore.textContent = "You have correctly guessed " + scoreCorrect + " out of " + gameLength + ".";
 }
 
 var elQuestion = document.getElementById("bodyQuestionText");
 var elQuestionPrompt = document.getElementById("bodyQuestionPrompt");
 var elNext = document.getElementById("bodyNext");
+var elScore = document.getElementById("bodyScore");
 var elButton = document.getElementById("bodyButton");
 elButton.addEventListener('click', buttonOnClick);
-var elScore = document.getElementById("bodyScore");
-var buttonClicked = false;
 
 elQuestion.textContent = "This is the guessing game!";
 elQuestionPrompt.textContent = "Click the button to make your guess.";
 elNext.textContent =  "Click to start!";
-elButton.onclick = gameBegin();
+var buttonClicked = false;
+  if (buttonClicked = true) {
+    gameBegin();
+  } else {
+    buttonCheck();
+  }
 gameReveal();
 
 function gameBegin () {
