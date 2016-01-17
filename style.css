@@ -1,16 +1,30 @@
 span {
-      font-family: Courier New;
-      font-size:30px;
-      font-weight: bold;
+  font-family: Chelsea Market;
+  font-size:30px;
+  font-weight: bold;
 }
 
 body {
-      background-color: "#5b0099";
-      text-decoration-color:"#d9b3ff";
+  background-color: #684DA3;
+  position: center;
+  font-family: Chelsea Market;
+  text-align: center;
 }
 
-div {
-      font-family=Impact;
-      color=d9b3ff;
-      align="center"
+p {
+  font-size: 28px;
+  color: white;
+}
+
+#wizards {
+  zoom: 35%;
+}
+
+#wand {
+  zoom: 30%;
+}
+
+button {
+  background-color: #FFF67F;
+  color: #32254F;
 }
