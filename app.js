@@ -126,7 +126,6 @@ function guessTransform() {
   } // TODO: needs public fail condition. contact me @
 }
 
-
 function gameCheck() {
   console.log("gameCheck triggers.");
   if (arrayGameType[gameRound] === "NUMBERGAME") {
