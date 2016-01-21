@@ -142,10 +142,11 @@ var elQuestionPrompt = document.getElementById("bodyQuestionPrompt");
 var elNext = document.getElementById("bodyNext");
 var elScore = document.getElementById("bodyScore");
 var elButton = document.getElementById("bodyButton");
-elButton.addEventListener('click', buttonOnClick);
+// elButton.addEventListener('click', buttonOnClick);
 
 elQuestion.textContent = "This is the guessing game!";
 elQuestionPrompt.textContent = "Click the button to make your guess.";
+elButton.innerHTML = "<button onclick=gameBegin()><span id="bodyNext">Click to Start!</span></button>";
 elNext.textContent =  "Click to start!";
 var buttonClicked = false;
   if (buttonClicked = true) {

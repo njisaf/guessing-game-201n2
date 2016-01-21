@@ -20,11 +20,12 @@ p {
   zoom: 35%;
 }
 
-#wand {
+#rewards {
   zoom: 30%;
 }
 
 button {
   background-color: #FFF67F;
   color: #32254F;
+  font-family: inherit;
 }
